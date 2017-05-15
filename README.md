@@ -116,9 +116,6 @@ When there is **only one element** (the first element) left in our unsorted list
 **List is now sorted using Bubble Sort: `[1, 2, 3, 4, 5, 6]`**
 
 
-<br>
-<br>
-![](https://cloud.githubusercontent.com/assets/6520345/15079536/eb15b6bc-136d-11e6-829c-91489b3af47b.png)
 
 ## Efficiency
 
