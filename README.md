@@ -1,3 +1,4 @@
+<img src="https://cloud.githubusercontent.com/assets/6520345/22489560/f791fe8a-e7cc-11e6-9a84-40c8aa1311da.png" width="60">
 # Bubble Sort
 
 
@@ -12,7 +13,7 @@ Bubble sort is one of the first sorting algorithms you should master. While it i
 *After this workshop, developers will be able to:*
 
 - describe bubble sort algorithm and identify its advantages and disadvantages.
-- write a pseudocode version of bubble sort and a javascript version of bubble sort.
+- write a pseudocode version of bubble sort and use TDD to write a Ruby version of bubble sort.
 - determine the runtime (in big-`O()` notation) for bubble sort.
 
 ### Where should we be now?
@@ -41,7 +42,6 @@ Here's the basic idea of the Bubble Sort algorithm:
 <a title="By Swfung8 (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ABubble-sort-example-300px.gif"><img width="400" alt="Bubble-sort-example-300px" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"/></a><br>
 <figcaption>Image: By Swfung8 (Own work) [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) or [GFDL](http://www.gnu.org/copyleft/fdl.html), via Wikimedia Commons</figcaption>
 </figure>
-
 
 
 ## Example: Sort this list using Bubble Sort: `[5, 4, 2, 3, 1, 6]`
@@ -158,15 +158,66 @@ When does it perform well?
 | `[9, 4, 7, 6]` |  `[4, 6, 7, 9]` |
 | `[]`  | `[]` |
 
+Keep in mind all the different ways you can explore your code:
+
+**From the Command Line**:  
+```ruby
+ruby bubble_sort.rb # just make sure you're printing some output!
+```
+
+**In the REPL**:  
+```ruby
+irb
+# or
+pry
+```
+
+```ruby
+pry > require "bubble_sort.rb"
+pry > bubble_sort([3,2,1])
+```
+
+**Using Rspec Tests**:   
+```bash
+rspec
+# or
+rspec spec/bubble_sort_spec.rb
+# or, run an individual test
+rspec -e "handles zero"
+```
+
 #### Hints:
 
 <details><summary>
-Start off by building pieces of the whole funciton.
+Start off by building pieces of the whole function.
 </summary>
 - build the capacity to swap the first two elements if the first is greater than the second.
 - build the capacity to loop through the whole array swapping whenever it's appropriate.
 - make sure you cycle through the array enough times to ensure the list is sorted.
 </details>
+
+<br>
+
+<details><summary>
+If you want to swap two variables, a and b:
+</summary>
+```ruby
+# in bubble_sort.rb  (you will need to create this)
+temp = a;
+a = b;
+b = temp;
+```
+
+</details>
+
+<br>
+Don't worry about efficiency the first time through. After you have a working version, spend time figuring out how you could cut corners to make the algorithm to be more efficient.
+
+A conventional for loop is probably a good idea on this one.
+
+
+<!--
+JAVASCRIPT HINTS:
 
 <details><summary>
 If you want to swap two variables, a and b:
@@ -179,15 +230,7 @@ temp = a;
 a = b;
 b = temp;
 ```
-</details>
-<details><summary>
-Don't worry about efficiency the first time through.
-</summary>
-After you have a working version, spend time figuring out how you could cut corners to make the algorithm to be more efficient.
-</details>
-
-A conventional for loop is probably a good idea on this one.
-
+</details> -->
 
 
 ## Thought Bubbles
